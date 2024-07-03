@@ -7,6 +7,8 @@ Created on Thu Jun 13 15:34:29 2024
 """
 
 import re
+import json
+import os
 
 def extraer_articulos(texto):
     # Expresión regular para encontrar "artículo" seguido de un número
@@ -28,6 +30,8 @@ def extraer_articulos(texto):
         articulos.append(articulo_texto)
     
     return articulos
+'''
+# separar articulos estatuto 
 
 nombre_archivo = 'data/estatuto_es.txt'
 
@@ -39,5 +43,84 @@ articulos = extraer_articulos(texto)
 for idx, articulo in enumerate(articulos, start=1):
     nombre_archivo_articulo = f'articulo_{idx}.txt'
     with open(nombre_archivo_articulo, 'w', encoding='utf-8') as archivo_articulo:
-        archivo_articulo.write(articulo)
+        archivo_articulo.write(articulo)    
+
+'''
+'''
+# Sacar pref labels y alt labels de la terminología en json
+term_list=[]
+term_file= "data/terminology.json"
+with open(term_file, 'r', encoding='utf-8') as archivo:
+    datos = json.load(archivo)
+    count=0
+i=0
+
+for clave, valor in datos.items():
+    if isinstance(valor, list):
+        print(f"{clave}:")
+        for i, item in enumerate(valor):
+            pref_label_list = item.get('http://www.w3.org/2004/02/skos/core#altLabel', [])
+            filtered_json = next((item for item in pref_label_list if item.get('@language') == 'es'), None)
+            if filtered_json != None:
+                pref_label= filtered_json.get('@value')
+                
+                print("ESTO ES PREF")
+                print(pref_label)
+                term_list.append(pref_label)
+
+
+term_file='alt_terms.txt'
+with open(term_file, 'w') as file:
+    for item in term_list:
+        file.write(f"{item}\n")
+
+'''
+
+#Buscar términos en artículos estatuto
+#PATRI LEE ESTO: hay pocas coincidencias, lo que me hace pensar que la puntuación tiene algo que ver. quizá haya que tokenizar el texto primero. quizá stemizarlo también
+
+def check_words_in_file(file_path, words):
+    with open(file_path, 'r') as file:
+        content = file.read()
+        for word in words:
+            if word in content:
+                return True, word
+    return False, None
+
+
+term_file='data/all_terms.txt'
+with open(term_file, 'r') as file:
+    terms = [line.strip() for line in file]
+
+folder_path='data/articles_test'
+files = os.listdir(folder_path)
+text_files = [file for file in files if file.endswith('.txt')]
+
+
+for text_file in text_files:
+    file_path = os.path.join(folder_path, text_file)
+    found, word = check_words_in_file(file_path, terms)
+    if found:
+        print(f"La palabra '{word}' se encontró en el archivo {text_file}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
