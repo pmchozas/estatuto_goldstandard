@@ -80,28 +80,40 @@ with open(term_file, 'w') as file:
 #PATRI LEE ESTO: hay pocas coincidencias, lo que me hace pensar que la puntuación tiene algo que ver. quizá haya que tokenizar el texto primero. quizá stemizarlo también
 
 def check_words_in_file(file_path, words):
+    appearing_terms=[]
     with open(file_path, 'r') as file:
         content = file.read()
         for word in words:
+            #print(word)
             if word in content:
-                return True, word
-    return False, None
+                # print('YES')
+                # print(word)
+                appearing_terms.append(word)
+                
+        return appearing_terms
 
 
 term_file='data/all_terms.txt'
 with open(term_file, 'r') as file:
     terms = [line.strip() for line in file]
+   
 
-folder_path='data/articles_test'
+folder_path='data/articles'
 files = os.listdir(folder_path)
 text_files = [file for file in files if file.endswith('.txt')]
 
+out_folder_path="data/terms"
 
 for text_file in text_files:
     file_path = os.path.join(folder_path, text_file)
-    found, word = check_words_in_file(file_path, terms)
+    out_path = os.path.join(out_folder_path, text_file)
+    found = check_words_in_file(file_path, terms)
+    #print(found)
     if found:
-        print(f"La palabra '{word}' se encontró en el archivo {text_file}")
+        print(f"archivo {text_file}")
+        with open(out_path, 'w') as file:
+            for term in found:
+                file.write(f"{term}\n")
 
 
 
