@@ -77,7 +77,6 @@ with open(term_file, 'w') as file:
 '''
 
 #Buscar términos en artículos estatuto
-#PATRI LEE ESTO: hay pocas coincidencias, lo que me hace pensar que la puntuación tiene algo que ver. quizá haya que tokenizar el texto primero. quizá stemizarlo también
 
 def check_words_in_file(file_path, words):
     appearing_terms=[]
