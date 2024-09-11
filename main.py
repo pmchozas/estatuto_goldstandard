@@ -75,6 +75,26 @@ with open(term_file, 'w') as file:
         file.write(f"{item}\n")
 
 '''
+#Buscar la posición de inicio y fin del término en el texto. 
+def find_offset(termino, texto):
+    posiciones = []
+    indice = texto.find(termino)
+    
+    # Mientras encuentre el término en el texto
+    while indice != -1:
+        inicio = indice
+        fin = inicio + len(termino)  # Fin es el índice del último carácter + 1
+        posiciones.append((inicio, fin))
+        
+        # Buscar siguiente ocurrencia desde el último índice + 1
+        indice = texto.find(termino, inicio + 1)
+    
+    return posiciones
+
+#Ordenar lista de términos por número de tokens
+def order_terms(terms):
+    # Ordenar la lista de términos por el número de tokens (palabras), de mayor a menor
+    return sorted(terms, key=lambda term: len(term.split()), reverse=True)
 
 #Buscar términos en artículos estatuto
 
@@ -95,13 +115,20 @@ def check_words_in_file(file_path, words):
 term_file='data/all_terms.txt'
 with open(term_file, 'r') as file:
     terms = [line.strip() for line in file]
+    terms = order_terms(terms)
    
 
-folder_path='data/articles'
+folder_path='data/test'
 files = os.listdir(folder_path)
 text_files = [file for file in files if file.endswith('.txt')]
 
-out_folder_path="data/terms"
+out_folder_path="data/test"
+
+my_dict={
+    'term':"",
+    'start':0,
+    'end':0
+    }
 
 for text_file in text_files:
     file_path = os.path.join(folder_path, text_file)
