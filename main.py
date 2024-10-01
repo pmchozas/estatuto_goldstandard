@@ -118,31 +118,63 @@ with open(term_file, 'r') as file:
     terms = order_terms(terms)
    
 
-folder_path='data/test'
+folder_path='data/gold_standard/articles'
+out_ann_path='data/gold_standard/brat_annotations'
 files = os.listdir(folder_path)
 text_files = [file for file in files if file.endswith('.txt')]
 
 out_folder_path="data/test"
 
-my_dict={
-    'term':"",
-    'start':0,
-    'end':0
-    }
+
 
 for text_file in text_files:
+    counter=0
+    
     file_path = os.path.join(folder_path, text_file)
     out_path = os.path.join(out_folder_path, text_file)
+    
     found = check_words_in_file(file_path, terms)
-    #print(found)
+    new_name=text_file.replace(".txt", "")
+    ann_name= f'{new_name}.ann'
+    ann_path=os.path.join(out_ann_path,ann_name)
+    print(found)
+    
+    
+    diccionarios = []
     if found:
-        print(f"archivo {text_file}")
-        with open(out_path, 'w') as file:
-            for term in found:
-                file.write(f"{term}\n")
 
+        print(ann_path)
+        for term in found: 
+            
+            print(term)
+            with open(file_path, 'r') as file:
+                text = file.read()
+                positions=find_offset(term, text)
+                print(positions)
+    
+                
+                for pos in positions:
+                    counter+=1
+                    my_dict={
+                        'id':"",
+                        'type': "concept",
+                        'start':0,
+                        'end':0,
+                        'term':""
+                        }
+                    my_dict['id']="T"+str(counter)
+                    my_dict['term']=term
+                    my_dict['start']=pos[0]
+                    my_dict['end']=pos[1]
+                    print(my_dict)
+                    diccionarios.append(my_dict)
+                    
 
-
+                #print(diccionarios)
+                with open(ann_path, mode='w') as file:
+                    for my_dict in diccionarios:
+                        file.write(f"{my_dict['id']}\t{my_dict['type']} {my_dict['start']} {my_dict['end']}\t {my_dict['term']}\n")
+                            
 
 
 
