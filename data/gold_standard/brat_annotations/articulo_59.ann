@@ -1,33 +1,20 @@
-T1	concept 69 88	 contrato de trabajo
-T2	concept 1314 1336	 condiciones de trabajo
-T3	concept 1476 1496	 periodo de consultas
-T4	concept 361 384	 prestación de servicios
-T5	concept 292 309	 disposición legal
-T6	concept 312 330	 convenio colectivo
-T7	concept 1264 1284	 movilidad geográfica
-T8	concept 1287 1310	 modificación sustancial
-T9	concept 1287 1299	 modificación
-T10	concept 781 788	 despido
-T11	concept 81 88	 trabajo
-T12	concept 1329 1336	 trabajo
-T13	concept 486 492	 acción
-T14	concept 713 719	 acción
-T15	concept 764 770	 acción
-T16	concept 1188 1198	 aplicación
-T17	concept 69 77	 contrato
-T18	concept 212 220	 contrato
-T19	concept 648 656	 contrato
-T20	concept 805 813	 contrato
-T21	concept 361 371	 prestación
-T22	concept 551 563	 cumplimiento
-T23	concept 1074 1080	 órgano
-T24	concept 449 457	 prórroga
-T25	concept 375 383	 servicio
-T26	concept 1236 1243	 empresa
-T27	concept 1425 1432	 empresa
-T28	concept 260 268	 duración
-T29	concept 680 688	 computar
-T30	concept 1350 1358	 computar
-T31	concept 321 330	 colectivo
-T32	concept 1476 1483	 periodo
-T33	concept 292 303	 disposición
+T1	concept 276 294	 convenio colectivo
+T2	concept 455 474	 jurisdicción social
+T3	concept 455 467	 jurisdicción
+T4	concept 885 893	 contrato
+T5	concept 756 764	 descanso
+T6	concept 103 112	 dirección
+T7	concept 395 404	 dirección
+T8	concept 39 49	 trabajador
+T9	concept 60 70	 trabajador
+T10	concept 555 565	 trabajador
+T11	concept 769 779	 trabajador
+T12	concept 144 156	 cumplimiento
+T13	concept 479 486	 sanción
+T14	concept 708 718	 vacaciones
+T15	concept 120 127	 empresa
+T16	concept 411 418	 empresa
+T17	concept 692 700	 duración
+T18	concept 744 751	 derecho
+T19	concept 285 294	 colectivo
+T20	concept 142 156	 incumplimiento

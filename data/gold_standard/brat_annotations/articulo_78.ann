@@ -1,21 +1,38 @@
-T1	concept 37 53	 lugar de reunión
-T2	concept 62 79	 centro de trabajo
-T3	concept 249 266	 centro de trabajo
-T4	concept 72 79	 trabajo
-T5	concept 169 176	 trabajo
-T6	concept 259 266	 trabajo
-T7	concept 715 725	 aplicación
-T8	concept 381 384	 ley
-T9	concept 229 234	 deber
-T10	concept 199 209	 empresario
-T11	concept 218 228	 empresario
-T12	concept 199 206	 empresa
-T13	concept 218 225	 empresa
-T14	concept 635 642	 empresa
-T15	concept 22 29	 reunión
-T16	concept 46 53	 reunión
-T17	concept 450 457	 reunión
-T18	concept 594 601	 reunión
-T19	concept 688 697	 colectivo
-T20	concept 507 513	 fianza
-T21	concept 649 656	 reunion
+T1	concept 234 255	 delegados de personal
+T2	concept 466 487	 delegados de personal
+T3	concept 260 277	 comité de empresa
+T4	concept 438 455	 comité de empresa
+T5	concept 137 154	 centro de trabajo
+T6	concept 280 297	 centro de trabajo
+T7	concept 147 154	 trabajo
+T8	concept 290 297	 trabajo
+T9	concept 917 923	 medida
+T10	concept 30 40	 trabajador
+T11	concept 101 111	 trabajador
+T12	concept 318 328	 trabajador
+T13	concept 785 797	 convocatoria
+T14	concept 746 756	 residencia
+T15	concept 771 781	 empresario
+T16	concept 50 61	 conformidad
+T17	concept 234 242	 delegado
+T18	concept 466 474	 delegado
+T19	concept 127 134	 empresa
+T20	concept 270 277	 empresa
+T21	concept 448 455	 empresa
+T22	concept 639 646	 empresa
+T23	concept 771 778	 empresa
+T24	concept 851 858	 empresa
+T25	concept 987 994	 empresa
+T26	concept 260 266	 comité
+T27	concept 438 444	 comité
+T28	concept 162 169	 derecho
+T29	concept 947 956	 perjuicio
+T30	concept 1157 1166	 perjuicio
+T31	concept 247 255	 personal
+T32	concept 479 487	 personal
+T33	concept 247 254	 persona
+T34	concept 479 486	 persona
+T35	concept 607 614	 persona
+T36	concept 819 826	 persona
+T37	concept 1024 1029	 turno
+T38	concept 1235 1242	 reunion

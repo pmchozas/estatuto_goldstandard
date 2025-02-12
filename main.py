@@ -9,7 +9,7 @@ Created on Thu Jun 13 15:34:29 2024
 import re
 import json
 import os
-
+'''
 def extraer_articulos(texto):
     # Expresión regular para encontrar "artículo" seguido de un número
     pattern = re.compile(r'(Artículo \d+)')
@@ -30,6 +30,7 @@ def extraer_articulos(texto):
         articulos.append(articulo_texto)
     
     return articulos
+'''
 '''
 # separar articulos estatuto 
 
@@ -118,7 +119,7 @@ with open(term_file, 'r') as file:
     terms = order_terms(terms)
    
 
-folder_path='data/gold_standard/articles'
+folder_path='data/gold_standard/articles2024'
 out_ann_path='data/gold_standard/brat_annotations'
 files = os.listdir(folder_path)
 text_files = [file for file in files if file.endswith('.txt')]

@@ -1,25 +1,47 @@
-T1	concept 77 97	 ámbito de aplicación
-T2	concept 582 596	 ámbito estatal
-T3	concept 345 366	 negociación colectiva
-T4	concept 309 317	 cláusula
-T5	concept 494 502	 cláusula
-T6	concept 87 97	 aplicación
-T7	concept 783 793	 trabajador
-T8	concept 77 83	 ámbito
-T9	concept 479 485	 ámbito
-T10	concept 582 588	 ámbito
-T11	concept 749 752	 ley
-T12	concept 992 995	 ley
-T13	concept 624 633	 sindicato
-T14	concept 798 808	 empresario
-T15	concept 438 450	 concurrencia
-T16	concept 710 721	 conformidad
-T17	concept 172 179	 empresa
-T18	concept 650 657	 empresa
-T19	concept 798 805	 empresa
-T20	concept 683 695	 legitimación
-T21	concept 232 241	 comunidad
-T22	concept 424 433	 conflicto
-T23	concept 55 64	 colectivo
-T24	concept 555 564	 colectivo
-T25	concept 1015 1024	 colectivo
+T1	concept 391 413	 condiciones de trabajo
+T2	concept 1100 1122	 condiciones de trabajo
+T3	concept 640 660	 ámbito de aplicación
+T4	concept 1014 1034	 periodo de consultas
+T5	concept 908 926	 convenio colectivo
+T6	concept 1139 1157	 convenio colectivo
+T7	concept 1485 1504	 movilidad funcional
+T8	concept 419 432	 productividad
+T9	concept 406 413	 trabajo
+T10	concept 1115 1122	 trabajo
+T11	concept 1255 1262	 trabajo
+T12	concept 1304 1311	 trabajo
+T13	concept 1327 1334	 trabajo
+T14	concept 1406 1413	 trabajo
+T15	concept 650 660	 aplicación
+T16	concept 117 130	 representante
+T17	concept 844 857	 representante
+T18	concept 139 149	 trabajador
+T19	concept 352 362	 trabajador
+T20	concept 604 614	 trabajador
+T21	concept 866 876	 trabajador
+T22	concept 324 330	 ámbito
+T23	concept 640 646	 ámbito
+T24	concept 1074 1081	 aplicar
+T25	concept 1359 1371	 remuneración
+T26	concept 566 569	 ley
+T27	concept 692 700	 vigencia
+T28	concept 161 171	 empresario
+T29	concept 367 377	 empresario
+T30	concept 590 600	 empresario
+T31	concept 1374 1381	 cuantía
+T32	concept 161 168	 empresa
+T33	concept 367 374	 empresa
+T34	concept 590 597	 empresa
+T35	concept 830 837	 empresa
+T36	concept 1088 1095	 empresa
+T37	concept 1193 1200	 empresa
+T38	concept 706 715	 perjuicio
+T39	concept 1042 1049	 término
+T40	concept 51 60	 colectivo
+T41	concept 304 313	 colectivo
+T42	concept 536 545	 colectivo
+T43	concept 917 926	 colectivo
+T44	concept 1148 1157	 colectivo
+T45	concept 1014 1021	 periodo
+T46	concept 1337 1342	 turno
+T47	concept 692 700	 vigencia
