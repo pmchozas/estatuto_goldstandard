@@ -115,14 +115,14 @@ def check_words_in_file(file_path, words):
         return appearing_terms
 
 
-term_file='data/dic_victor_terms.txt'
+term_file='data/all_terms.txt'
 with open(term_file, 'r') as file:
     terms = [line.strip() for line in file]
     terms = order_terms(terms)
    
 
 folder_path='data/gold_standard/articles2024'
-out_ann_path='data/gold_standard/brat_annotations_dic_victor'
+out_ann_path='data/gold_standard/labourlaw'
 files = os.listdir(folder_path)
 text_files = [file for file in files if file.endswith('.txt')]
 
@@ -166,7 +166,7 @@ for text_file in text_files:
                         'term':""
                         }
                     my_dict['id']="T"+str(counter)
-                    my_dict['term']=term
+                    my_dict['term']=str(term)
                     my_dict['start']=pos[0]
                     my_dict['end']=pos[1]
                     print(my_dict)
@@ -176,7 +176,7 @@ for text_file in text_files:
                 #print(diccionarios)
                 with open(ann_path, mode='w') as file:
                     for my_dict in diccionarios:
-                        file.write(f"{my_dict['id']}\t{my_dict['type']} {my_dict['start']} {my_dict['end']}\t {my_dict['term']}\n")
+                        file.write(f"{my_dict['id']}\t{my_dict['type']} {my_dict['start']} {my_dict['end']}\t{my_dict['term']}\n")
                             
 
 
